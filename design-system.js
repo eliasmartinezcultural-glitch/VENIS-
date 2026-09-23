@@ -332,7 +332,7 @@ function validateVenisDesign(data){const warnings=[],q=VENIS_DESIGN.quality;if((
 
 /* V1.5 VISUAL ART DIRECTION LAYER: metadata only, no functional flow changes. */
 VENIS_DESIGN.artDirection={hierarchy:{primary:"name",secondary:"date",tertiary:"place",support:"message"},composition:{focalPoint:"one",maxVisualMotifs:1,displayTypefaces:1,bodyTypefaces:1},imageTreatments:{immersive:"full-bleed",portrait:"centered-frame",poster:"high-impact",airy:"soft-frame",split:"architectural",clean:"quiet"},spacing:{micro:8,component:16,section:32,hero:48},qualityGate:["mobile-legibility","date-time-scan","venue-scan","contrast","overflow","visual-coherence"]};
-VENIS_DESIGN.assetLayer={stickerRoles:["cover","corner","mini-preview","event-marker"],photoModes:["full-bleed","portrait-frame","soft-frame","architectural","quiet"],fallbackRule:"vector-first",maxMotifsPerCover:2,externalDependencies:0,visualFamilies:12,productDesigns:24};VENIS_DESIGN.version="1.7";
+VENIS_DESIGN.assetLayer={stickerRoles:["cover","corner","mini-preview","event-marker"],photoModes:["full-bleed","portrait-frame","soft-frame","architectural","quiet"],fallbackRule:"vector-first",maxMotifsPerCover:2,externalDependencies:0,visualFamilies:12,productDesigns:21};VENIS_DESIGN.version="1.7";
 
 /* V1.9 · DEEP PRODUCT ART SYSTEM */
 VENIS_DESIGN.familyDepth={
