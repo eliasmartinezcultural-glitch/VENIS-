@@ -1,90 +1,354 @@
-/*
- VENIS DESIGN SYSTEM v1.1
- TYPE -> TEMPLATE -> PALETTE -> TYPOGRAPHY -> DECORATION -> COMPONENTS -> ENGINE
+/* VENIS DESIGN SYSTEM v1.3
+ TYPE → TEMPLATE → PALETTE → TYPOGRAPHY → DECORATION → COMPONENTS → ENGINE
 */
 const VENIS_DESIGN={
-  version:"1.2",
-  quality:{maxTitle:34,maxSubtitle:72,maxMessage:220,minContrast:4.5,rule:"mobile-first, readable, intentional"},
-  templates:{
-    editorial:{label:"Editorial",family:"editorial",layout:"hero",desc:"Tipográfico y sofisticado"},
-    romance:{label:"Romance",family:"romance",layout:"centered",desc:"Clásico y emocional"},
-    celebration:{label:"Celebración",family:"celebration",layout:"bold",desc:"Grande, alegre y expresivo"},
-    soft:{label:"Suave",family:"soft",layout:"airy",desc:"Luminoso y delicado"},
-    modern:{label:"Moderno",family:"modern",layout:"split",desc:"Geométrico y actual"},
-    minimal:{label:"Minimal",family:"minimal",layout:"clean",desc:"Puro y con mucho aire"}
+  "version": "1.3",
+  "quality": {
+    "maxTitle": 34,
+    "maxSubtitle": 72,
+    "maxMessage": 220,
+    "minContrast": 4.5
   },
-  palettes:{
-    tierra:{label:"Tierra",bg:"#f3eee7",surface:"#fffaf5",ink:"#241c17",accent:"#a86f46",accent2:"#70482f",soft:"#ead9c8"},
-    noche:{label:"Noche",bg:"#111217",surface:"#1a1c23",ink:"#f7f2eb",accent:"#c7a46a",accent2:"#e8d5ad",soft:"#34343d"},
-    rosa:{label:"Rosa polvo",bg:"#f5eded",surface:"#fff9fa",ink:"#302327",accent:"#b77f8e",accent2:"#825662",soft:"#ead1d7"},
-    botanica:{label:"Botánica",bg:"#edf0e9",surface:"#fbfcf8",ink:"#20271f",accent:"#70856c",accent2:"#4d624b",soft:"#d6dfd1"},
-    azul:{label:"Azul",bg:"#edf2f7",surface:"#fbfdff",ink:"#1c2733",accent:"#587b9d",accent2:"#3d5b76",soft:"#d3e0eb"},
-    lavanda:{label:"Lavanda",bg:"#f0edf5",surface:"#fcfaff",ink:"#292430",accent:"#8170a4",accent2:"#5f527d",soft:"#ddd5eb"},
-    fiesta:{label:"Fiesta",bg:"#fff1dc",surface:"#fffaf3",ink:"#271c15",accent:"#d17b37",accent2:"#8d4c1d",soft:"#f4d3a8"},
-    blanco:{label:"Blanco",bg:"#f7f7f5",surface:"#ffffff",ink:"#171717",accent:"#77746d",accent2:"#4d4b47",soft:"#e7e5df"}
+  "tokens": {
+    "radius": {
+      "sharp": "4px",
+      "soft": "18px",
+      "round": "32px"
+    },
+    "density": {
+      "compact": "12px",
+      "comfortable": "20px",
+      "airy": "32px"
+    },
+    "textScale": {
+      "eyebrow": "10px",
+      "title": "clamp(44px,9vw,88px)",
+      "body": "15px",
+      "small": "10px"
+    }
   },
-  typography:{
-    editorial:{label:"Serif elegante",display:"Georgia, 'Times New Roman', serif",text:"Inter, ui-sans-serif, system-ui, sans-serif",accent:"Georgia, serif"},
-    classic:{label:"Clásica",display:"'Palatino Linotype', Palatino, Georgia, serif",text:"Georgia, serif",accent:"Georgia, serif"},
-    modern:{label:"Sans moderna",display:"Inter, ui-sans-serif, system-ui, sans-serif",text:"Inter, ui-sans-serif, system-ui, sans-serif",accent:"Inter, sans-serif"},
-    soft:{label:"Suave",display:"Georgia, serif",text:"'Trebuchet MS', ui-sans-serif, sans-serif",accent:"Georgia, serif"},
-    bold:{label:"Editorial fuerte",display:"Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",text:"Inter, ui-sans-serif, system-ui, sans-serif",accent:"Inter, sans-serif"}
+  "templates": {
+    "editorial": {
+      "label": "Editorial",
+      "family": "editorial",
+      "layout": "hero",
+      "desc": "Tipográfico, sobrio y sofisticado",
+      "cover": "immersive",
+      "meta": "rail",
+      "message": "quote"
+    },
+    "romance": {
+      "label": "Romance",
+      "family": "romance",
+      "layout": "centered",
+      "desc": "Emocional, clásico y delicado",
+      "cover": "portrait",
+      "meta": "center",
+      "message": "quote"
+    },
+    "celebration": {
+      "label": "Celebración",
+      "family": "celebration",
+      "layout": "bold",
+      "desc": "Energético, grande y festivo",
+      "cover": "poster",
+      "meta": "tiles",
+      "message": "center"
+    },
+    "soft": {
+      "label": "Suave",
+      "family": "soft",
+      "layout": "airy",
+      "desc": "Luminoso, orgánico y familiar",
+      "cover": "airy",
+      "meta": "soft",
+      "message": "quote"
+    },
+    "modern": {
+      "label": "Moderno",
+      "family": "modern",
+      "layout": "split",
+      "desc": "Geométrico, actual y comercial",
+      "cover": "split",
+      "meta": "rail",
+      "message": "plain"
+    },
+    "minimal": {
+      "label": "Minimal",
+      "family": "minimal",
+      "layout": "clean",
+      "desc": "Limpio, premium y con aire",
+      "cover": "clean",
+      "meta": "line",
+      "message": "plain"
+    }
   },
-  decorations:{
-    none:{label:"Limpio",className:"deco-none"},
-    ornaments:{label:"Ornamentos",className:"deco-ornaments"},
-    botanical:{label:"Botánica",className:"deco-botanical"},
-    stars:{label:"Estrellas",className:"deco-stars"},
-    geometry:{label:"Geometría",className:"deco-geometry"},
-    lines:{label:"Líneas",className:"deco-lines"}
+  "palettes": {
+    "tierra": {
+      "label": "Tierra",
+      "bg": "#f3eee7",
+      "surface": "#fffaf5",
+      "ink": "#241c17",
+      "accent": "#a86f46",
+      "accent2": "#70482f",
+      "soft": "#ead9c8"
+    },
+    "noche": {
+      "label": "Noche",
+      "bg": "#111217",
+      "surface": "#1a1c23",
+      "ink": "#f7f2eb",
+      "accent": "#c7a46a",
+      "accent2": "#e8d5ad",
+      "soft": "#34343d"
+    },
+    "rosa": {
+      "label": "Rosa polvo",
+      "bg": "#f5eded",
+      "surface": "#fff9fa",
+      "ink": "#302327",
+      "accent": "#b77f8e",
+      "accent2": "#825662",
+      "soft": "#ead1d7"
+    },
+    "botanica": {
+      "label": "Botánica",
+      "bg": "#edf0e9",
+      "surface": "#fbfcf8",
+      "ink": "#20271f",
+      "accent": "#70856c",
+      "accent2": "#4d624b",
+      "soft": "#d6dfd1"
+    },
+    "azul": {
+      "label": "Azul",
+      "bg": "#edf2f7",
+      "surface": "#fbfdff",
+      "ink": "#1c2733",
+      "accent": "#587b9d",
+      "accent2": "#3d5b76",
+      "soft": "#d3e0eb"
+    },
+    "lavanda": {
+      "label": "Lavanda",
+      "bg": "#f0edf5",
+      "surface": "#fcfaff",
+      "ink": "#292430",
+      "accent": "#8170a4",
+      "accent2": "#5f527d",
+      "soft": "#ddd5eb"
+    },
+    "fiesta": {
+      "label": "Fiesta",
+      "bg": "#fff1dc",
+      "surface": "#fffaf3",
+      "ink": "#271c15",
+      "accent": "#d17b37",
+      "accent2": "#8d4c1d",
+      "soft": "#f4d3a8"
+    },
+    "blanco": {
+      "label": "Blanco",
+      "bg": "#f7f7f5",
+      "surface": "#ffffff",
+      "ink": "#171717",
+      "accent": "#77746d",
+      "accent2": "#4d4b47",
+      "soft": "#e7e5df"
+    }
   },
-  componentRules:{
-    cover:"hero",
-    dateBox:"event-meta",
-    details:"optional-detail",
-    message:"editorial-message",
-    actions:"conversion-actions",
-    footer:"brand-signature"
+  "typography": {
+    "editorial": {
+      "label": "Serif elegante",
+      "display": "Georgia,'Times New Roman',serif",
+      "text": "Inter,ui-sans-serif,system-ui,sans-serif",
+      "accent": "Georgia,serif"
+    },
+    "classic": {
+      "label": "Clásica",
+      "display": "'Palatino Linotype',Palatino,Georgia,serif",
+      "text": "Georgia,serif",
+      "accent": "Georgia,serif"
+    },
+    "modern": {
+      "label": "Sans moderna",
+      "display": "Inter,ui-sans-serif,system-ui,sans-serif",
+      "text": "Inter,ui-sans-serif,system-ui,sans-serif",
+      "accent": "Inter,sans-serif"
+    },
+    "soft": {
+      "label": "Suave",
+      "display": "Georgia,serif",
+      "text": "'Trebuchet MS',ui-sans-serif,sans-serif",
+      "accent": "Georgia,serif"
+    },
+    "bold": {
+      "label": "Editorial fuerte",
+      "display": "Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif",
+      "text": "Inter,ui-sans-serif,system-ui,sans-serif",
+      "accent": "Inter,sans-serif"
+    }
   },
-  recipes:{
-    elegante:{label:"Elegante",template:"editorial",palette:"noche",typography:"editorial",decoration:"ornaments"},
-    romantico:{label:"Romántico",template:"romance",palette:"rosa",typography:"classic",decoration:"botanical"},
-    fiesta:{label:"Fiesta",template:"celebration",palette:"fiesta",typography:"bold",decoration:"stars"},
-    sereno:{label:"Sereno",template:"soft",palette:"botanica",typography:"soft",decoration:"botanical"},
-    moderno:{label:"Moderno",template:"modern",palette:"azul",typography:"modern",decoration:"geometry"},
-    limpio:{label:"Minimal",template:"minimal",palette:"blanco",typography:"modern",decoration:"lines"}
+  "decorations": {
+    "none": {
+      "label": "Limpio",
+      "className": "deco-none",
+      "layers": 0
+    },
+    "ornaments": {
+      "label": "Ornamentos",
+      "className": "deco-ornaments",
+      "layers": 2
+    },
+    "botanical": {
+      "label": "Botánica",
+      "className": "deco-botanical",
+      "layers": 2
+    },
+    "stars": {
+      "label": "Estrellas",
+      "className": "deco-stars",
+      "layers": 2
+    },
+    "geometry": {
+      "label": "Geometría",
+      "className": "deco-geometry",
+      "layers": 1
+    },
+    "lines": {
+      "label": "Líneas",
+      "className": "deco-lines",
+      "layers": 1
+    }
   },
-  eventDefaults:{
-    cumple:"fiesta",
-    quince:"elegante",
-    boda:"romantico",
-    bautismo:"sereno",
-    evento:"moderno"
+  "components": {
+    "cover": {
+      "required": true
+    },
+    "eventMeta": {
+      "required": true
+    },
+    "details": {
+      "optional": true
+    },
+    "message": {
+      "optional": true
+    },
+    "actions": {
+      "required": true
+    },
+    "footer": {
+      "required": true
+    }
+  },
+  "recipes": {
+    "elegante": {
+      "label": "Elegante",
+      "template": "editorial",
+      "palette": "noche",
+      "typography": "editorial",
+      "decoration": "ornaments",
+      "bestFor": [
+        "quince",
+        "evento"
+      ]
+    },
+    "romantico": {
+      "label": "Romántico",
+      "template": "romance",
+      "palette": "rosa",
+      "typography": "classic",
+      "decoration": "botanical",
+      "bestFor": [
+        "boda",
+        "quince"
+      ]
+    },
+    "fiesta": {
+      "label": "Fiesta",
+      "template": "celebration",
+      "palette": "fiesta",
+      "typography": "bold",
+      "decoration": "stars",
+      "bestFor": [
+        "cumple",
+        "quince"
+      ]
+    },
+    "sereno": {
+      "label": "Sereno",
+      "template": "soft",
+      "palette": "botanica",
+      "typography": "soft",
+      "decoration": "botanical",
+      "bestFor": [
+        "bautismo",
+        "evento"
+      ]
+    },
+    "moderno": {
+      "label": "Moderno",
+      "template": "modern",
+      "palette": "azul",
+      "typography": "modern",
+      "decoration": "geometry",
+      "bestFor": [
+        "evento",
+        "cumple"
+      ]
+    },
+    "limpio": {
+      "label": "Minimal",
+      "template": "minimal",
+      "palette": "blanco",
+      "typography": "modern",
+      "decoration": "lines",
+      "bestFor": [
+        "boda",
+        "evento",
+        "cumple"
+      ]
+    }
+  },
+  "eventDefaults": {
+    "cumple": "fiesta",
+    "quince": "elegante",
+    "boda": "romantico",
+    "bautismo": "sereno",
+    "evento": "moderno"
+  },
+  "eventRules": {
+    "cumple": {
+      "titleLabel": "Nombre del cumpleañero/a",
+      "subtitleHint": "Una frase breve y alegre",
+      "messagePlaceholder": "Una noche para celebrar juntos.",
+      "showDress": true
+    },
+    "quince": {
+      "titleLabel": "Nombre de la quinceañera",
+      "subtitleHint": "Una frase elegante y personal",
+      "messagePlaceholder": "Quiero compartir este momento tan especial con vos.",
+      "showDress": true
+    },
+    "boda": {
+      "titleLabel": "Nombres de la pareja",
+      "subtitleHint": "Una frase breve sobre el gran día",
+      "messagePlaceholder": "Nos hace mucha ilusión compartir este día con ustedes.",
+      "showDress": true
+    },
+    "bautismo": {
+      "titleLabel": "Nombre del protagonista",
+      "subtitleHint": "Una frase breve y familiar",
+      "messagePlaceholder": "Los esperamos para compartir este momento en familia.",
+      "showDress": false
+    },
+    "evento": {
+      "titleLabel": "Nombre del evento",
+      "subtitleHint": "Una frase que explique la ocasión",
+      "messagePlaceholder": "Te esperamos para compartir este encuentro.",
+      "showDress": true
+    }
   }
 };
-
-function resolveVenisDesign(style={},preset="cumple"){
-  const recipe=VENIS_DESIGN.recipes[style.recipe||VENIS_DESIGN.eventDefaults[preset]||"limpio"];
-  const template=VENIS_DESIGN.templates[style.template||recipe.template]||VENIS_DESIGN.templates[recipe.template];
-  const palette=VENIS_DESIGN.palettes[style.palette||recipe.palette]||VENIS_DESIGN.palettes[recipe.palette];
-  const typography=VENIS_DESIGN.typography[style.typography||recipe.typography]||VENIS_DESIGN.typography[recipe.typography];
-  const decoration=VENIS_DESIGN.decorations[style.decoration||recipe.decoration]||VENIS_DESIGN.decorations[recipe.decoration];
-  return {
-    recipe:style.recipe||VENIS_DESIGN.eventDefaults[preset]||"limpio",
-    templateId:Object.keys(VENIS_DESIGN.templates).find(k=>VENIS_DESIGN.templates[k]===template)||recipe.template,
-    paletteId:Object.keys(VENIS_DESIGN.palettes).find(k=>VENIS_DESIGN.palettes[k]===palette)||recipe.palette,
-    typographyId:Object.keys(VENIS_DESIGN.typography).find(k=>VENIS_DESIGN.typography[k]===typography)||recipe.typography,
-    decorationId:Object.keys(VENIS_DESIGN.decorations).find(k=>VENIS_DESIGN.decorations[k]===decoration)||recipe.decoration,
-    template,palette,typography,decoration
-  };
-}
-
-
-function validateVenisDesign(data){
-  const warnings=[];
-  const q=VENIS_DESIGN.quality;
-  if((data.name||"").length>q.maxTitle) warnings.push("El nombre es demasiado largo para una portada limpia.");
-  if((data.subtitle||"").length>q.maxSubtitle) warnings.push("La bajada puede perder jerarquía visual.");
-  if((data.message||"").length>q.maxMessage) warnings.push("El mensaje puede resultar pesado en móvil.");
-  return {ok:warnings.length===0,warnings};
-}
+function resolveVenisDesign(style={},preset="cumple"){const fallback=VENIS_DESIGN.eventDefaults[preset]||"limpio";const recipe=VENIS_DESIGN.recipes[style.recipe]||VENIS_DESIGN.recipes[fallback];const id=(group,value,fallbackId)=>VENIS_DESIGN[group][value]?value:fallbackId;const templateId=id("templates",style.template,recipe.template),paletteId=id("palettes",style.palette,recipe.palette),typographyId=id("typography",style.typography,recipe.typography),decorationId=id("decorations",style.decoration,recipe.decoration);return{recipe:style.recipe||fallback,templateId,paletteId,typographyId,decorationId,template:VENIS_DESIGN.templates[templateId],palette:VENIS_DESIGN.palettes[paletteId],typography:VENIS_DESIGN.typography[typographyId],decoration:VENIS_DESIGN.decorations[decorationId]};}
+function validateVenisDesign(data){const warnings=[],q=VENIS_DESIGN.quality;if((data.name||"").length>q.maxTitle)warnings.push("Acortá el nombre para conservar una portada limpia.");if((data.subtitle||"").length>q.maxSubtitle)warnings.push("La bajada es larga y puede perder jerarquía.");if((data.message||"").length>q.maxMessage)warnings.push("El mensaje puede resultar pesado en móvil.");if(!data.date||!data.time||!data.place)warnings.push("Faltan datos esenciales del evento.");return{ok:warnings.length===0,warnings};}
