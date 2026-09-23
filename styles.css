@@ -85,3 +85,64 @@
 .template-soft .message{font-size:20px}
 @media(max-width:780px){.recipe-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.recipe{min-height:198px}.recipe-preview{height:118px}.preview-title{font-size:22px}}
 @media(max-width:520px){.recipe-grid{grid-template-columns:1fr}.recipe{min-height:188px}.recipe-preview{height:112px}.cover-sticker{width:110px}.template-modern .cover-sticker{width:125px}}
+
+/* V1.8 — DEEP ART DIRECTION: each product is a visual identity */
+.invitation[class*="product-"] .cover{background-blend-mode:multiply}
+.invitation[class*="product-"] .cover-sticker{opacity:var(--invite-motif-opacity,.5);transform-origin:center}
+.invitation[class*="product-"] .invite-card:after{pointer-events:none}
+.direction-luxury-night .cover{background:radial-gradient(circle at 78% 18%,color-mix(in srgb,var(--invite-soft) 42%,transparent),transparent 24%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-luxury-night .invite-card{border:1px solid color-mix(in srgb,var(--invite-accent) 38%,transparent)}
+.direction-luxury-night .invite-body{background:linear-gradient(180deg,var(--invite-surface),color-mix(in srgb,var(--invite-soft) 10%,var(--invite-surface)))}
+.direction-ceremonial .cover{background:radial-gradient(circle at 50% 18%,color-mix(in srgb,var(--invite-soft) 75%,transparent),transparent 28%),linear-gradient(180deg,var(--invite-accent2),var(--invite-ink))}
+.direction-ceremonial .cover-content{text-align:center;margin:auto}
+.direction-ceremonial .invite-body{text-align:center}
+.direction-poster-burst .cover{background:radial-gradient(circle at 82% 18%,var(--invite-soft),transparent 19%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-poster-burst .cover:before{background:repeating-linear-gradient(115deg,transparent 0 26px,rgba(255,255,255,.06) 27px 28px)}
+.direction-poster-burst .invite-name{text-transform:uppercase;text-wrap:pretty}
+.direction-botanical-light .cover{background:radial-gradient(circle at 15% 85%,color-mix(in srgb,var(--invite-soft) 70%,transparent),transparent 35%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-botanical-light .invite-body{background-image:radial-gradient(circle at 92% 8%,color-mix(in srgb,var(--invite-soft) 28%,transparent) 0 18%,transparent 19%)}
+.direction-architectural .cover{background:linear-gradient(90deg,var(--invite-accent2) 0 17%,transparent 17% 100%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-architectural .cover:before{background:linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:32px 100%}
+.direction-quiet-gallery .cover{background:var(--invite-surface)}
+.direction-quiet-gallery .cover-content{color:var(--invite-ink);text-align:center;margin:auto}
+.direction-quiet-gallery .cover:after{display:none}
+.direction-quiet-gallery .invite-type{color:var(--invite-accent)}
+.direction-quiet-gallery .invite-sub{color:var(--invite-ink)}
+.direction-balloon-cascade .cover{background:radial-gradient(circle at 75% 24%,color-mix(in srgb,var(--invite-soft) 85%,transparent),transparent 22%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-balloon-cascade .cover-sticker{transform:rotate(-7deg) scale(1.08)}
+.direction-cake-studio .cover{background:radial-gradient(circle at 50% 16%,color-mix(in srgb,var(--invite-soft) 85%,transparent),transparent 25%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-cake-studio .cover-content{text-align:center;margin:auto}
+.direction-fireworks-night .cover{background:radial-gradient(circle at 70% 20%,color-mix(in srgb,var(--invite-accent) 30%,transparent),transparent 23%),linear-gradient(145deg,#10121c,var(--invite-accent2))}
+.direction-fireworks-night .invite-card{box-shadow:0 32px 100px rgba(0,0,0,.3)}
+.direction-crown-editorial .cover{background:radial-gradient(circle at 50% 15%,color-mix(in srgb,var(--invite-soft) 65%,transparent),transparent 25%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-crown-editorial .cover-content{text-align:center;margin:auto}
+.direction-starburst .cover{background:radial-gradient(circle at 75% 20%,color-mix(in srgb,var(--invite-accent) 38%,transparent),transparent 24%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-starburst .cover:before{background:repeating-conic-gradient(from 10deg at 75% 20%,rgba(255,255,255,.09) 0 3deg,transparent 3deg 15deg)}
+.direction-floral-portrait .cover{background:radial-gradient(circle at 50% 45%,color-mix(in srgb,var(--invite-soft) 72%,transparent),transparent 32%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-floral-portrait .cover-content{text-align:center;margin:auto}
+.direction-rings-ceremony .cover{background:radial-gradient(circle at 50% 20%,color-mix(in srgb,var(--invite-soft) 80%,transparent),transparent 25%),linear-gradient(180deg,var(--invite-accent2),var(--invite-ink))}
+.direction-garden-paper .cover{background:radial-gradient(circle at 10% 90%,color-mix(in srgb,var(--invite-soft) 85%,transparent),transparent 35%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-modern-vows .cover{background:linear-gradient(100deg,var(--invite-accent2) 0 8%,transparent 8% 100%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-morning-light .cover{background:radial-gradient(circle at 50% 12%,#fff 0 4%,color-mix(in srgb,var(--invite-soft) 60%,transparent) 5% 25%,transparent 26%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-garden-baptism .cover{background:radial-gradient(circle at 18% 20%,color-mix(in srgb,var(--invite-soft) 72%,transparent),transparent 25%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-classic-light .cover{background:linear-gradient(135deg,var(--invite-surface),var(--invite-soft));}
+.direction-classic-light .cover:after{background:linear-gradient(180deg,transparent,rgba(0,0,0,.18))}
+.direction-corporate-architecture .cover{background:linear-gradient(90deg,var(--invite-accent2) 0 13%,transparent 13% 100%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-corporate-architecture .invite-name{letter-spacing:-.055em}
+.direction-midnight-editorial .cover{background:radial-gradient(circle at 78% 16%,color-mix(in srgb,var(--invite-accent) 35%,transparent),transparent 25%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+.direction-creative-poster .cover{background:linear-gradient(135deg,var(--invite-accent2),var(--invite-ink));}
+.direction-creative-poster .cover:before{background:linear-gradient(125deg,transparent 0 38%,rgba(255,255,255,.12) 39% 41%,transparent 42% 100%)}
+.density-quiet .invite-body{padding-top:46px;padding-bottom:46px}
+.density-balanced .invite-body{padding-top:38px;padding-bottom:38px}
+.density-rich .invite-body{padding-top:30px;padding-bottom:30px}
+.density-maximal .invite-body{padding-top:24px;padding-bottom:24px}
+.invitation[class*="product-"] .date-box{transition:background .2s ease}
+.density-maximal .date-box{box-shadow:0 12px 26px rgba(0,0,0,.08)}
+.density-rich .message{position:relative;padding-inline:8px}
+.density-rich .message:before{content:"";display:block;width:34px;height:2px;background:var(--invite-accent);margin-bottom:14px;opacity:.55}
+.direction-ceremonial .message:before,.direction-crown-editorial .message:before,.direction-rings-ceremony .message:before{margin-inline:auto}
+@media(max-width:480px){
+ .direction-poster-burst .invite-name,.direction-starburst .invite-name{font-size:clamp(43px,13vw,66px)}
+ .direction-architectural .cover,.direction-corporate-architecture .cover{background:linear-gradient(90deg,var(--invite-accent2) 0 11%,transparent 11% 100%),linear-gradient(135deg,var(--invite-accent2),var(--invite-ink))}
+ .density-maximal .invite-body,.density-rich .invite-body{padding-top:25px;padding-bottom:25px}
+}
