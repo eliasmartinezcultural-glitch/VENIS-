@@ -1,8 +1,8 @@
-/* VENIS DESIGN SYSTEM v1.8
+/* VENIS DESIGN SYSTEM v2.0
  TYPE → TEMPLATE → PALETTE → TYPOGRAPHY → DECORATION → ASSETS → COMPONENTS → ENGINE
 */
 const VENIS_DESIGN={
-  "version": "1.8",
+  "version": "2.0",
   "quality": {
     "maxTitle": 34,
     "maxSubtitle": 72,
@@ -350,4 +350,6 @@ VENIS_DESIGN.familyDepth={
 "Corporativo":{variants:["architecture","conference","executive"],compositions:["architecture","grid","editorial"],patterns:["grid","blocks","fine-grid"],frames:["hard-edge","fine-border","hairline"],ornaments:["geometry","ribbon","sparkle"],photos:["architectural","full-bleed","portrait"],dates:["rail","tiles","editorial-rail"]}
 };
 VENIS_DESIGN.depthFor=function(productKey){const r=VENIS_DESIGN.recipes[productKey]||{},family=r.family||"Moderno",d=VENIS_DESIGN.familyDepth[family]||VENIS_DESIGN.familyDepth.Moderno,index=Math.max(0,Object.keys(VENIS_DESIGN.recipes).indexOf(productKey))%3;return{family,variant:d.variants[index],composition:d.compositions[index],pattern:d.patterns[index],frame:d.frames[index],ornament:d.ornaments[index],photo:d.photos[index],date:d.dates[index]};};
-VENIS_DESIGN.version="1.9";
+VENIS_DESIGN.version="2.0";
+
+VENIS_DESIGN.whatsappPresentation={priority:"link-first",actions:["whatsapp","native-share","copy-link"],recipientView:"clean"};
