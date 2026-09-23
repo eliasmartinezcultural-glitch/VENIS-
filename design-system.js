@@ -1,8 +1,8 @@
-/* VENIS DESIGN SYSTEM v1.3
+/* VENIS DESIGN SYSTEM v1.5
  TYPE → TEMPLATE → PALETTE → TYPOGRAPHY → DECORATION → COMPONENTS → ENGINE
 */
 const VENIS_DESIGN={
-  "version": "1.3",
+  "version": "1.5",
   "quality": {
     "maxTitle": 34,
     "maxSubtitle": 72,
