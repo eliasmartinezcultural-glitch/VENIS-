@@ -242,73 +242,27 @@ const VENIS_DESIGN={
     }
   },
   "recipes": {
-    "elegante": {
-      "label": "Elegante",
-      "template": "editorial",
-      "palette": "noche",
-      "typography": "editorial",
-      "decoration": "ornaments",
-      "bestFor": [
-        "quince",
-        "evento"
-      ]
-    },
-    "romantico": {
-      "label": "Romántico",
-      "template": "romance",
-      "palette": "rosa",
-      "typography": "classic",
-      "decoration": "botanical",
-      "bestFor": [
-        "boda",
-        "quince"
-      ]
-    },
-    "fiesta": {
-      "label": "Fiesta",
-      "template": "celebration",
-      "palette": "fiesta",
-      "typography": "bold",
-      "decoration": "stars",
-      "bestFor": [
-        "cumple",
-        "quince"
-      ]
-    },
-    "sereno": {
-      "label": "Sereno",
-      "template": "soft",
-      "palette": "botanica",
-      "typography": "soft",
-      "decoration": "botanical",
-      "bestFor": [
-        "bautismo",
-        "evento"
-      ]
-    },
-    "moderno": {
-      "label": "Moderno",
-      "template": "modern",
-      "palette": "azul",
-      "typography": "modern",
-      "decoration": "geometry",
-      "bestFor": [
-        "evento",
-        "cumple"
-      ]
-    },
-    "limpio": {
-      "label": "Minimal",
-      "template": "minimal",
-      "palette": "blanco",
-      "typography": "modern",
-      "decoration": "lines",
-      "bestFor": [
-        "boda",
-        "evento",
-        "cumple"
-      ]
-    }
+    "elegante": { "label":"Elegante", "family":"Elegante", "template":"editorial", "palette":"noche", "typography":"editorial", "decoration":"ornaments", "asset":"sparkle", "density":"quiet", "bestFor":["quince","evento"] },
+    "romantico": { "label":"Romántico", "family":"Romántico", "template":"romance", "palette":"rosa", "typography":"classic", "decoration":"botanical", "asset":"hearts", "density":"rich", "bestFor":["boda","quince"] },
+    "fiesta": { "label":"Fiesta", "family":"Festivo", "template":"celebration", "palette":"fiesta", "typography":"bold", "decoration":"stars", "asset":"confetti", "density":"maximal", "bestFor":["cumple","quince"] },
+    "sereno": { "label":"Sereno", "family":"Bautismo", "template":"soft", "palette":"botanica", "typography":"soft", "decoration":"botanical", "asset":"baptism", "density":"quiet", "bestFor":["bautismo","evento"] },
+    "moderno": { "label":"Moderno", "family":"Moderno", "template":"modern", "palette":"azul", "typography":"modern", "decoration":"geometry", "asset":"geometry", "density":"balanced", "bestFor":["evento","cumple"] },
+    "limpio": { "label":"Minimal", "family":"Minimal", "template":"minimal", "palette":"blanco", "typography":"modern", "decoration":"lines", "asset":"sparkle", "density":"quiet", "bestFor":["boda","evento","cumple"] },
+    "cumple-pop": { "label":"Cumple Pop", "family":"Festivo", "template":"celebration", "palette":"fiesta", "typography":"bold", "decoration":"stars", "asset":"balloon", "density":"maximal", "bestFor":["cumple"] },
+    "cumple-dulce": { "label":"Dulce", "family":"Infantil", "template":"soft", "palette":"lavanda", "typography":"soft", "decoration":"stars", "asset":"cake", "density":"rich", "bestFor":["cumple"] },
+    "cumple-noche": { "label":"Noche de Fiesta", "family":"Festivo", "template":"editorial", "palette":"noche", "typography":"bold", "decoration":"stars", "asset":"fireworks", "density":"rich", "bestFor":["cumple"] },
+    "quince-glam": { "label":"Quince Glam", "family":"Quince", "template":"editorial", "palette":"lavanda", "typography":"classic", "decoration":"ornaments", "asset":"crown", "density":"rich", "bestFor":["quince"] },
+    "quince-estelar": { "label":"Quince Estelar", "family":"Quince", "template":"celebration", "palette":"noche", "typography":"bold", "decoration":"stars", "asset":"sparkle", "density":"maximal", "bestFor":["quince"] },
+    "quince-floral": { "label":"Quince Floral", "family":"Quince", "template":"romance", "palette":"rosa", "typography":"classic", "decoration":"botanical", "asset":"flowers", "density":"rich", "bestFor":["quince"] },
+    "boda-clasica": { "label":"Boda Clásica", "family":"Boda", "template":"romance", "palette":"blanco", "typography":"classic", "decoration":"ornaments", "asset":"rings", "density":"quiet", "bestFor":["boda"] },
+    "boda-botanica": { "label":"Boda Botánica", "family":"Boda", "template":"soft", "palette":"botanica", "typography":"soft", "decoration":"botanical", "asset":"botanical", "density":"rich", "bestFor":["boda"] },
+    "boda-editorial": { "label":"Boda Editorial", "family":"Boda", "template":"editorial", "palette":"tierra", "typography":"editorial", "decoration":"lines", "asset":"ribbon", "density":"quiet", "bestFor":["boda"] },
+    "bautismo-luz": { "label":"Luz", "family":"Bautismo", "template":"soft", "palette":"blanco", "typography":"soft", "decoration":"botanical", "asset":"sun", "density":"quiet", "bestFor":["bautismo"] },
+    "bautismo-botanico": { "label":"Botánico", "family":"Bautismo", "template":"romance", "palette":"botanica", "typography":"classic", "decoration":"botanical", "asset":"flowers", "density":"balanced", "bestFor":["bautismo"] },
+    "bautismo-sereno": { "label":"Clásico", "family":"Bautismo", "template":"minimal", "palette":"azul", "typography":"classic", "decoration":"lines", "asset":"baptism", "density":"quiet", "bestFor":["bautismo"] },
+    "evento-pro": { "label":"Profesional", "family":"Corporativo", "template":"modern", "palette":"azul", "typography":"modern", "decoration":"geometry", "asset":"geometry", "density":"balanced", "bestFor":["evento"] },
+    "evento-noche": { "label":"Noche", "family":"Elegante", "template":"editorial", "palette":"noche", "typography":"editorial", "decoration":"ornaments", "asset":"moon", "density":"quiet", "bestFor":["evento"] },
+    "evento-creativo": { "label":"Creativo", "family":"Moderno", "template":"celebration", "palette":"lavanda", "typography":"bold", "decoration":"geometry", "asset":"sparkle", "density":"rich", "bestFor":["evento"] }
   },
   "eventDefaults": {
     "cumple": "fiesta",
@@ -355,4 +309,4 @@ function validateVenisDesign(data){const warnings=[],q=VENIS_DESIGN.quality;if((
 
 /* V1.5 VISUAL ART DIRECTION LAYER: metadata only, no functional flow changes. */
 VENIS_DESIGN.artDirection={hierarchy:{primary:"name",secondary:"date",tertiary:"place",support:"message"},composition:{focalPoint:"one",maxVisualMotifs:1,displayTypefaces:1,bodyTypefaces:1},imageTreatments:{immersive:"full-bleed",portrait:"centered-frame",poster:"high-impact",airy:"soft-frame",split:"architectural",clean:"quiet"},spacing:{micro:8,component:16,section:32,hero:48},qualityGate:["mobile-legibility","date-time-scan","venue-scan","contrast","overflow","visual-coherence"]};
-VENIS_DESIGN.assetLayer={stickerRoles:["cover","corner","mini-preview","event-marker"],photoModes:["full-bleed","portrait-frame","soft-frame","architectural","quiet"],fallbackRule:"vector-first",maxMotifsPerCover:2,externalDependencies:0};VENIS_DESIGN.version="1.6";
+VENIS_DESIGN.assetLayer={stickerRoles:["cover","corner","mini-preview","event-marker"],photoModes:["full-bleed","portrait-frame","soft-frame","architectural","quiet"],fallbackRule:"vector-first",maxMotifsPerCover:2,externalDependencies:0,visualFamilies:12,productDesigns:24};VENIS_DESIGN.version="1.7";
