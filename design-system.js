@@ -1,8 +1,8 @@
-/* VENIS DESIGN SYSTEM v1.6
+/* VENIS DESIGN SYSTEM v1.8
  TYPE → TEMPLATE → PALETTE → TYPOGRAPHY → DECORATION → ASSETS → COMPONENTS → ENGINE
 */
 const VENIS_DESIGN={
-  "version": "1.6",
+  "version": "1.8",
   "quality": {
     "maxTitle": 34,
     "maxSubtitle": 72,
@@ -263,6 +263,29 @@ const VENIS_DESIGN={
     "evento-pro": { "label":"Profesional", "family":"Corporativo", "template":"modern", "palette":"azul", "typography":"modern", "decoration":"geometry", "asset":"geometry", "density":"balanced", "bestFor":["evento"] },
     "evento-noche": { "label":"Noche", "family":"Elegante", "template":"editorial", "palette":"noche", "typography":"editorial", "decoration":"ornaments", "asset":"moon", "density":"quiet", "bestFor":["evento"] },
     "evento-creativo": { "label":"Creativo", "family":"Moderno", "template":"celebration", "palette":"lavanda", "typography":"bold", "decoration":"geometry", "asset":"sparkle", "density":"rich", "bestFor":["evento"] }
+  },
+  "productDirections": {
+    "elegante": { "hero":"luxury-night", "alignment":"left", "frame":"fine-border", "motif":"sparkle", "motifScale":"small", "motifOpacity":0.42, "surface":"velvet", "rhythm":"wide", "dateTreatment":"editorial-rail", "messageTreatment":"signature" },
+    "romantico": { "hero":"ceremonial", "alignment":"center", "frame":"soft-oval", "motif":"hearts", "motifScale":"medium", "motifOpacity":0.48, "surface":"paper", "rhythm":"airy", "dateTreatment":"ornamental", "messageTreatment":"love-note" },
+    "fiesta": { "hero":"poster-burst", "alignment":"left", "frame":"none", "motif":"confetti", "motifScale":"large", "motifOpacity":0.7, "surface":"paper", "rhythm":"tight", "dateTreatment":"tiles", "messageTreatment":"headline" },
+    "sereno": { "hero":"botanical-light", "alignment":"center", "frame":"soft-oval", "motif":"baptism", "motifScale":"medium", "motifOpacity":0.38, "surface":"linen", "rhythm":"airy", "dateTreatment":"soft-panel", "messageTreatment":"family-note" },
+    "moderno": { "hero":"architectural", "alignment":"left", "frame":"hard-edge", "motif":"geometry", "motifScale":"large", "motifOpacity":0.28, "surface":"paper", "rhythm":"compact", "dateTreatment":"rail", "messageTreatment":"plain" },
+    "limpio": { "hero":"quiet-gallery", "alignment":"center", "frame":"hairline", "motif":"sparkle", "motifScale":"small", "motifOpacity":0.18, "surface":"paper", "rhythm":"wide", "dateTreatment":"line", "messageTreatment":"plain" },
+    "cumple-pop": { "hero":"balloon-cascade", "alignment":"left", "frame":"soft-card", "motif":"balloon", "motifScale":"large", "motifOpacity":0.72, "surface":"paper", "rhythm":"tight", "dateTreatment":"tiles", "messageTreatment":"headline" },
+    "cumple-dulce": { "hero":"cake-studio", "alignment":"center", "frame":"soft-oval", "motif":"cake", "motifScale":"medium", "motifOpacity":0.52, "surface":"pastel-paper", "rhythm":"airy", "dateTreatment":"soft-panel", "messageTreatment":"warm-note" },
+    "cumple-noche": { "hero":"fireworks-night", "alignment":"left", "frame":"fine-border", "motif":"fireworks", "motifScale":"large", "motifOpacity":0.66, "surface":"velvet", "rhythm":"wide", "dateTreatment":"dark-tiles", "messageTreatment":"headline" },
+    "quince-glam": { "hero":"crown-editorial", "alignment":"center", "frame":"ornamental", "motif":"crown", "motifScale":"medium", "motifOpacity":0.5, "surface":"silk", "rhythm":"airy", "dateTreatment":"ceremonial", "messageTreatment":"signature" },
+    "quince-estelar": { "hero":"starburst", "alignment":"left", "frame":"none", "motif":"sparkle", "motifScale":"large", "motifOpacity":0.68, "surface":"velvet", "rhythm":"tight", "dateTreatment":"dark-tiles", "messageTreatment":"headline" },
+    "quince-floral": { "hero":"floral-portrait", "alignment":"center", "frame":"soft-oval", "motif":"flowers", "motifScale":"large", "motifOpacity":0.48, "surface":"paper", "rhythm":"airy", "dateTreatment":"ornamental", "messageTreatment":"love-note" },
+    "boda-clasica": { "hero":"rings-ceremony", "alignment":"center", "frame":"hairline", "motif":"rings", "motifScale":"medium", "motifOpacity":0.45, "surface":"paper", "rhythm":"wide", "dateTreatment":"ceremonial", "messageTreatment":"signature" },
+    "boda-botanica": { "hero":"garden-paper", "alignment":"center", "frame":"botanical", "motif":"botanical", "motifScale":"large", "motifOpacity":0.4, "surface":"linen", "rhythm":"airy", "dateTreatment":"soft-panel", "messageTreatment":"love-note" },
+    "boda-editorial": { "hero":"modern-vows", "alignment":"left", "frame":"fine-border", "motif":"ribbon", "motifScale":"medium", "motifOpacity":0.3, "surface":"paper", "rhythm":"wide", "dateTreatment":"editorial-rail", "messageTreatment":"signature" },
+    "bautismo-luz": { "hero":"morning-light", "alignment":"center", "frame":"hairline", "motif":"sun", "motifScale":"medium", "motifOpacity":0.3, "surface":"paper", "rhythm":"airy", "dateTreatment":"soft-panel", "messageTreatment":"family-note" },
+    "bautismo-botanico": { "hero":"garden-baptism", "alignment":"center", "frame":"botanical", "motif":"flowers", "motifScale":"medium", "motifOpacity":0.38, "surface":"linen", "rhythm":"airy", "dateTreatment":"ornamental", "messageTreatment":"family-note" },
+    "bautismo-sereno": { "hero":"classic-light", "alignment":"center", "frame":"hairline", "motif":"baptism", "motifScale":"small", "motifOpacity":0.24, "surface":"paper", "rhythm":"wide", "dateTreatment":"line", "messageTreatment":"family-note" },
+    "evento-pro": { "hero":"corporate-architecture", "alignment":"left", "frame":"hard-edge", "motif":"geometry", "motifScale":"large", "motifOpacity":0.24, "surface":"paper", "rhythm":"compact", "dateTreatment":"rail", "messageTreatment":"plain" },
+    "evento-noche": { "hero":"midnight-editorial", "alignment":"left", "frame":"fine-border", "motif":"moon", "motifScale":"large", "motifOpacity":0.35, "surface":"velvet", "rhythm":"wide", "dateTreatment":"dark-tiles", "messageTreatment":"signature" },
+    "evento-creativo": { "hero":"creative-poster", "alignment":"left", "frame":"hard-edge", "motif":"sparkle", "motifScale":"large", "motifOpacity":0.55, "surface":"paper", "rhythm":"tight", "dateTreatment":"tiles", "messageTreatment":"headline" }
   },
   "eventDefaults": {
     "cumple": "fiesta",
