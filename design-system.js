@@ -3,6 +3,8 @@
  TYPE -> TEMPLATE -> PALETTE -> TYPOGRAPHY -> DECORATION -> COMPONENTS -> ENGINE
 */
 const VENIS_DESIGN={
+  version:"1.2",
+  quality:{maxTitle:34,maxSubtitle:72,maxMessage:220,minContrast:4.5,rule:"mobile-first, readable, intentional"},
   templates:{
     editorial:{label:"Editorial",family:"editorial",layout:"hero",desc:"Tipográfico y sofisticado"},
     romance:{label:"Romance",family:"romance",layout:"centered",desc:"Clásico y emocional"},
@@ -36,6 +38,14 @@ const VENIS_DESIGN={
     geometry:{label:"Geometría",className:"deco-geometry"},
     lines:{label:"Líneas",className:"deco-lines"}
   },
+  componentRules:{
+    cover:"hero",
+    dateBox:"event-meta",
+    details:"optional-detail",
+    message:"editorial-message",
+    actions:"conversion-actions",
+    footer:"brand-signature"
+  },
   recipes:{
     elegante:{label:"Elegante",template:"editorial",palette:"noche",typography:"editorial",decoration:"ornaments"},
     romantico:{label:"Romántico",template:"romance",palette:"rosa",typography:"classic",decoration:"botanical"},
@@ -67,4 +77,14 @@ function resolveVenisDesign(style={},preset="cumple"){
     decorationId:Object.keys(VENIS_DESIGN.decorations).find(k=>VENIS_DESIGN.decorations[k]===decoration)||recipe.decoration,
     template,palette,typography,decoration
   };
+}
+
+
+function validateVenisDesign(data){
+  const warnings=[];
+  const q=VENIS_DESIGN.quality;
+  if((data.name||"").length>q.maxTitle) warnings.push("El nombre es demasiado largo para una portada limpia.");
+  if((data.subtitle||"").length>q.maxSubtitle) warnings.push("La bajada puede perder jerarquía visual.");
+  if((data.message||"").length>q.maxMessage) warnings.push("El mensaje puede resultar pesado en móvil.");
+  return {ok:warnings.length===0,warnings};
 }
