@@ -1,4 +1,4 @@
-/* VENIS VISUAL ASSET ENGINE v1.6
+/* VENIS VISUAL ASSET ENGINE v1.7
    STATIC, LIGHTWEIGHT, GITHUB-PAGES SAFE
    ASSETS = STICKERS + ILLUSTRATIONS + PATTERNS + PHOTO TREATMENTS
 */
@@ -53,7 +53,7 @@ const VENIS_ASSETS={
     elegante:["sparkle","ribbon","botanical","geometry","moon","stars"],
     aniversario:["rings","flowers","hearts","ribbon","sparkle","stars"],
     moderno:["geometry","sparkle","moon","sun"],
-    corporativo:["geometry","sparkle","lines"]
+    corporativo:["geometry","sparkle","ribbon"]
   },
   eventAssets:{
     cumple:"balloon",
@@ -69,9 +69,14 @@ const VENIS_ASSETS={
   sticker(id,color="currentColor"){
     return this.dataUri(id,color);
   },
-  resolve(template,preset){
+  resolve(template,preset,assetOverride,density="balanced"){
     const base=this.treatmentByTemplate[template]||this.treatmentByTemplate.minimal;
     const event=this.eventAssets[preset];
-    return {...base,eventAsset:event||base.asset};
+    const chosen=assetOverride&&this.stickers[assetOverride]?assetOverride:(event||base.asset);
+    return {...base,eventAsset:chosen,density};
+  },
+  family(preset){
+    const map={cumple:"festivo",quince:"quince",boda:"boda",bautismo:"bautismo",evento:"moderno"};
+    return this.styleFamilies[map[preset]]||this.styleFamilies.moderno;
   }
 };
