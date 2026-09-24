@@ -420,3 +420,273 @@
     transition:none!important;
   }
 }
+
+
+/* =========================================================
+   VENIS V2.2 · ART DIRECTION OVERLAY
+   Product presentation only — no DOM / logic changes.
+   ========================================================= */
+
+.invite-card{
+  --ornament-alpha:.32;
+  position:relative;
+  isolation:isolate;
+}
+.invite-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:5;
+  pointer-events:none;
+  border-radius:inherit;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);
+}
+.cover{
+  position:relative;
+  overflow:hidden;
+}
+.cover::before{
+  content:"";
+  position:absolute;
+  width:42%;
+  aspect-ratio:1;
+  top:-22%;
+  right:-12%;
+  border-radius:50%;
+  border:1px solid color-mix(in srgb,var(--invite-accent) 24%,transparent);
+  box-shadow:
+    0 0 0 18px color-mix(in srgb,var(--invite-accent) 5%,transparent),
+    0 0 0 38px color-mix(in srgb,var(--invite-accent) 3%,transparent);
+  z-index:2;
+  pointer-events:none;
+}
+.cover::after{
+  content:"";
+  position:absolute;
+  width:32%;
+  aspect-ratio:1;
+  bottom:-19%;
+  left:-10%;
+  border-radius:50%;
+  border:1px solid color-mix(in srgb,var(--invite-soft) 32%,transparent);
+  z-index:2;
+  pointer-events:none;
+}
+.cover-content{
+  text-shadow:0 2px 24px rgba(0,0,0,.18);
+}
+.invite-name{
+  line-height:.9;
+  letter-spacing:-.045em;
+  text-wrap:balance;
+}
+.invite-sub{
+  letter-spacing:.015em;
+  line-height:1.55;
+}
+.invite-type{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+.invite-type::before,
+.invite-type::after{
+  content:"";
+  width:24px;
+  height:1px;
+  background:currentColor;
+  opacity:.48;
+}
+.invite-body{
+  position:relative;
+  overflow:hidden;
+}
+.invite-body::before{
+  content:"✦";
+  position:absolute;
+  top:18px;
+  right:24px;
+  font-size:15px;
+  opacity:.16;
+  color:var(--invite-accent);
+}
+.invite-body::after{
+  content:"";
+  position:absolute;
+  bottom:20px;
+  left:25px;
+  width:46px;
+  height:1px;
+  background:var(--invite-accent);
+  opacity:.22;
+}
+.date-box{
+  position:relative;
+}
+.date-box::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  width:54px;
+  height:2px;
+  transform:translateX(-50%);
+  background:var(--invite-accent);
+  opacity:.45;
+}
+.detail{
+  position:relative;
+  border-color:color-mix(in srgb,var(--invite-ink) 10%,transparent);
+}
+.detail strong{
+  letter-spacing:.01em;
+}
+.message{
+  font-size:clamp(14px,2.4vw,17px);
+  line-height:1.75;
+}
+.invite-actions{
+  position:relative;
+  padding-top:8px;
+}
+.invite-actions::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  width:70px;
+  height:1px;
+  transform:translateX(-50%);
+  background:var(--invite-accent);
+  opacity:.25;
+}
+.invite-btn{
+  position:relative;
+  overflow:hidden;
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+}
+.invite-btn:hover{
+  transform:translateY(-2px);
+  filter:saturate(1.04);
+}
+.invite-btn:active{transform:translateY(0)}
+.invite-btn.main::after,
+.invite-btn.wa-share::after{
+  content:"";
+  position:absolute;
+  inset:1px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:inherit;
+  pointer-events:none;
+}
+.invite-foot{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+}
+.invite-foot::before,.invite-foot::after{
+  content:"";
+  width:20px;
+  height:1px;
+  background:currentColor;
+  opacity:.35;
+}
+
+/* Distinct visual personalities for the existing product families. */
+.product-romantico .cover::before,
+.product-boda-clasica .cover::before,
+.product-boda-botanica .cover::before{
+  border-radius:48% 52% 55% 45%;
+  transform:rotate(18deg);
+}
+.product-quince-floral .cover::before{
+  border-width:2px;
+  border-style:dotted;
+}
+.product-infantil .cover::before{
+  border-radius:38% 62% 42% 58%;
+  transform:rotate(-12deg);
+}
+.product-evento-noche .cover::before,
+.product-elegante .cover::before{
+  border-radius:0;
+  transform:rotate(45deg);
+}
+.product-corporativo .cover::before,
+.product-evento .cover::before{
+  border-radius:4px;
+  transform:rotate(12deg);
+}
+.product-bautismo .cover::before{
+  border-radius:50%;
+  border-style:dashed;
+}
+
+/* Existing frames become more tactile without adding markup. */
+.frame-botanical::after{
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb,var(--invite-accent) 10%,transparent),
+    0 0 0 6px color-mix(in srgb,var(--invite-accent) 3%,transparent);
+}
+.frame-ornamental::after{
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--invite-accent) 10%,transparent);
+}
+.frame-ticket::after{
+  box-shadow:0 0 0 6px color-mix(in srgb,var(--invite-accent) 3%,transparent);
+}
+
+/* Photo treatment: make ordinary user photos feel intentionally art-directed. */
+.photo-full-bleed .cover-media::after{
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.05) 20%,rgba(0,0,0,.02) 45%,rgba(0,0,0,.55));
+}
+.photo-portrait .cover-media::after{
+  background:linear-gradient(180deg,transparent 48%,rgba(0,0,0,.48));
+}
+.photo-paper-frame .cover-media{
+  padding:12px;
+}
+.photo-paper-frame .cover-media::after{
+  inset:12px;
+}
+.photo-architectural .cover-media::after{
+  background:linear-gradient(135deg,rgba(0,0,0,.08),transparent 48%,rgba(0,0,0,.4));
+}
+
+/* A subtle "printed object" feel for no-photo variants. */
+.cover:not(:has(.cover-photo)){
+  background-image:
+    radial-gradient(circle at 15% 18%,color-mix(in srgb,var(--invite-accent) 10%,transparent) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 82% 72%,color-mix(in srgb,var(--invite-soft) 12%,transparent) 0 1px,transparent 1.5px);
+  background-size:22px 22px,31px 31px;
+}
+
+/* Mobile is the actual delivery format. */
+@media(max-width:640px){
+  .invite-shell{padding-top:10px}
+  .invite-card{box-shadow:0 22px 60px rgba(0,0,0,.3)}
+  .cover::before{width:48%;top:-17%;right:-16%}
+  .invite-body{padding:28px 22px 30px}
+  .invite-body::before{right:15px}
+  .message{line-height:1.68}
+  .invite-btn{min-height:54px}
+}
+
+/* Desktop share view becomes a clean gallery presentation. */
+@media(min-width:900px){
+  .invite-shell{
+    display:flex;
+    justify-content:center;
+    padding-top:34px;
+  }
+  .invite-card{
+    width:min(720px,calc(100vw - 80px));
+  }
+}
+
+/* Keep all decorative motion optional and restrained. */
+@media(prefers-reduced-motion:no-preference){
+  .invite-card::before{transition:box-shadow .3s ease}
+  .invite-btn:hover{box-shadow:0 14px 30px color-mix(in srgb,var(--invite-accent) 18%,transparent)}
+}
