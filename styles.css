@@ -211,7 +211,7 @@
 
 
 /* =========================================================
-   VENIS V2.2 · PRODUCT FINAL / SHARE-FIRST ART DIRECTION
+   VENIS V2.2.1 · PRODUCT FINAL / SHARE-FIRST ART DIRECTION
    Visual layer only. No structural or functional changes.
    ========================================================= */
 
@@ -423,7 +423,7 @@
 
 
 /* =========================================================
-   VENIS V2.2 · ART DIRECTION OVERLAY
+   VENIS V2.2.1 · ART DIRECTION OVERLAY
    Product presentation only — no DOM / logic changes.
    ========================================================= */
 
@@ -691,9 +691,18 @@
   .invite-btn:hover{box-shadow:0 14px 30px color-mix(in srgb,var(--invite-accent) 18%,transparent)}
 }
 
-/* VENIS V2.2 · EVENT IDENTITY / SHARE INFRASTRUCTURE */
+/* VENIS V2.2.1 · EVENT IDENTITY / SHARE INFRASTRUCTURE */
 .invite-identity{display:inline-flex;align-items:center;gap:.55rem;margin-top:1rem;padding:.45rem .7rem;border:1px solid color-mix(in srgb,var(--invite-ink) 18%,transparent);border-radius:999px;background:color-mix(in srgb,var(--invite-surface) 72%,transparent);font-size:.66rem;letter-spacing:.12em}
 .invite-identity span{opacity:.65}.invite-identity strong{font-variant-numeric:tabular-nums;letter-spacing:.16em}
 .event-identity-bar{display:grid;grid-template-columns:1fr auto;gap:.25rem .8rem;margin:1rem 0 0;padding:.8rem 1rem;border:1px solid color-mix(in srgb,var(--invite-ink) 12%,transparent);border-radius:14px;background:color-mix(in srgb,var(--invite-surface) 80%,transparent)}
 .event-identity-bar span{font-size:.62rem;letter-spacing:.14em;opacity:.62}.event-identity-bar strong{font-size:.82rem;letter-spacing:.18em;text-align:right}.event-identity-bar small{grid-column:1/-1;opacity:.62}
 @media(max-width:560px){.invite-identity{font-size:.58rem}.event-identity-bar{grid-template-columns:1fr}.event-identity-bar strong{text-align:left}}
+
+/* VENIS V2.2.1 · CENTRO DE ENTREGA */
+.delivery-center{max-width:720px;margin:0 auto 18px;padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.025));color:#fff;box-shadow:0 18px 55px rgba(0,0,0,.18)}
+.delivery-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.delivery-kicker{font-size:9px;letter-spacing:.2em;opacity:.58}.delivery-head h2{margin:7px 0 5px;font-size:20px}.delivery-head p{margin:0;font-size:12px;opacity:.58}.delivery-status{white-space:nowrap;padding:9px 11px;border-radius:999px;font-size:8px;font-weight:900;letter-spacing:.12em;border:1px solid rgba(255,255,255,.12)}.delivery-status.ready{background:rgba(255,255,255,.1)}.delivery-status.review{background:rgba(255,190,100,.1);color:#f2c68c}
+.delivery-event{display:flex;justify-content:space-between;gap:16px;margin-top:18px;padding:14px;border-radius:16px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.07)}.delivery-event small,.delivery-code small{display:block;font-size:8px;letter-spacing:.15em;opacity:.5}.delivery-event strong{display:block;margin:4px 0;font-size:17px}.delivery-event span{font-size:11px;opacity:.58}.delivery-code{text-align:right}.delivery-code strong{font-variant-numeric:tabular-nums;letter-spacing:.16em}
+.delivery-checks{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}.delivery-check{display:flex;align-items:center;gap:9px;padding:10px;border-radius:13px;background:rgba(255,255,255,.035)}.delivery-check>span{width:24px;height:24px;display:grid;place-items:center;border-radius:50%;font-weight:900;font-size:12px}.delivery-check.ok>span{background:rgba(255,255,255,.1)}.delivery-check.bad>span{background:rgba(240,150,80,.15);color:#f2c68c}.delivery-check strong{display:block;font-size:10px}.delivery-check small{display:block;font-size:8px;opacity:.48;margin-top:2px}.delivery-warning{margin-top:10px;padding:10px 12px;border-radius:12px;background:rgba(240,150,80,.09);color:#f2c68c;font-size:10px}
+.delivery-flow{display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;gap:8px;margin-top:14px}.delivery-btn{min-height:45px;border-radius:13px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#fff;font-size:9px;font-weight:900;letter-spacing:.07em;cursor:pointer}.delivery-btn.primary{background:#f6f0e7;color:#17130f;border-color:#f6f0e7}.delivery-btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.11)}.delivery-btn.primary:hover{background:#fff}
+.delivery-note{margin-top:11px;font-size:9px;line-height:1.5;opacity:.48}.delivery-note span{font-weight:900;letter-spacing:.12em;margin-right:6px}
+@media(max-width:640px){.delivery-center{margin:0 0 12px;padding:15px;border-radius:18px}.delivery-head{display:block}.delivery-status{display:inline-block;margin-top:10px}.delivery-event{display:block}.delivery-code{text-align:left;margin-top:10px}.delivery-checks{grid-template-columns:1fr}.delivery-flow{grid-template-columns:1fr 1fr}.delivery-btn.primary{grid-column:1/-1}}
