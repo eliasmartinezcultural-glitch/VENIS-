@@ -690,3 +690,10 @@
   .invite-card::before{transition:box-shadow .3s ease}
   .invite-btn:hover{box-shadow:0 14px 30px color-mix(in srgb,var(--invite-accent) 18%,transparent)}
 }
+
+/* VENIS V2.2 · EVENT IDENTITY / SHARE INFRASTRUCTURE */
+.invite-identity{display:inline-flex;align-items:center;gap:.55rem;margin-top:1rem;padding:.45rem .7rem;border:1px solid color-mix(in srgb,var(--invite-ink) 18%,transparent);border-radius:999px;background:color-mix(in srgb,var(--invite-surface) 72%,transparent);font-size:.66rem;letter-spacing:.12em}
+.invite-identity span{opacity:.65}.invite-identity strong{font-variant-numeric:tabular-nums;letter-spacing:.16em}
+.event-identity-bar{display:grid;grid-template-columns:1fr auto;gap:.25rem .8rem;margin:1rem 0 0;padding:.8rem 1rem;border:1px solid color-mix(in srgb,var(--invite-ink) 12%,transparent);border-radius:14px;background:color-mix(in srgb,var(--invite-surface) 80%,transparent)}
+.event-identity-bar span{font-size:.62rem;letter-spacing:.14em;opacity:.62}.event-identity-bar strong{font-size:.82rem;letter-spacing:.18em;text-align:right}.event-identity-bar small{grid-column:1/-1;opacity:.62}
+@media(max-width:560px){.invite-identity{font-size:.58rem}.event-identity-bar{grid-template-columns:1fr}.event-identity-bar strong{text-align:left}}
