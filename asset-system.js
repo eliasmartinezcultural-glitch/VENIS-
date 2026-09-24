@@ -1,9 +1,9 @@
-/* VENIS VISUAL ASSET ENGINE v2.0
+/* VENIS VISUAL ASSET ENGINE v2.2
    STATIC, LIGHTWEIGHT, GITHUB-PAGES SAFE
    ASSETS = STICKERS + ILLUSTRATIONS + PATTERNS + PHOTO TREATMENTS
 */
 const VENIS_ASSETS={
-  version:"2.0",
+  version:"2.2",
   catalog:{families:["Festivo","Romántico","Quince","Boda","Infantil","Bautismo","Elegante","Musical","Graduación","Aniversario","Moderno","Corporativo"],illustrationStyles:["line-art","hand-drawn","watercolor","flat","ornamental","poster","botanical","geometric","premium"],density:["quiet","balanced","rich","maximal"]},
   stickers:{
     cake:{label:"Torta",svg:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120"><path d="M45 62h90v35H45z" fill="currentColor" opacity=".16" stroke="currentColor" stroke-width="3"/><path d="M38 62h104l-12-18H50z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M60 40V22m30 18V17m30 23V22" stroke="currentColor" stroke-width="3"/></svg>'},
